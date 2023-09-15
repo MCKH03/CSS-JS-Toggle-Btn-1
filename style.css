@@ -1,0 +1,91 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  background-color: white;
+  align-items: center;
+  justify-content: center;
+
+  transition: all 0.5s;
+}
+
+body.dark {
+  background-color: black;
+}
+
+.toggle-btn {
+  border: none;
+  outline: none;
+  background-color: #875cff;
+  border-radius: 10rem;
+  width: 55rem;
+  height: 20.5rem;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5rem;
+}
+
+.toggle {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+
+  background-color: white;
+  border-radius: 50%;
+  width: 17rem;
+  height: 17rem;
+
+  transition: all 0.5s;
+}
+
+.circle {
+  position: absolute;
+  left: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+
+  border: 1rem solid transparent;
+  border-left: 1rem solid #875cff;
+
+  background-color: transparent;
+  border-radius: 50%;
+  width: 16rem;
+  height: 16rem;
+
+  transition: all 0.5s;
+}
+
+.icon {
+  width: 10rem;
+  height: 10rem;
+}
+
+.toggle-btn.active .toggle {
+  left: 37rem;
+  background-color: black;
+}
+
+.toggle-btn.active .circle {
+  left: 37.5rem;
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.toggle-btn:hover {
+  cursor: pointer;
+}
